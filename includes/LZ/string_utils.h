@@ -2,6 +2,9 @@
 # define STRING_UTILS_H
 # ifndef _WIN32
 #  include "unistd.h"
+# else
+#  include <stdlib.h>
+#  include <io.h>
 # endif
 # include <stdlib.h>
 # include <string.h>

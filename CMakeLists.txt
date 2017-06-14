@@ -2,8 +2,8 @@ cmake_minimum_required(VERSION 3.5.1)
 
 project("LAZY")
 
-OPTION(GLEW_PATH "GLEW directory" "../glew")
-OPTION(GLFW_PATH "GLFW directory" "../glfw")
+OPTION(GLEW_PATH "GLEW directory" ../glew)
+OPTION(GLFW_PATH "GLFW directory" ../glfw)
 
 SET(CMAKE_CXX_FLAGS "-std=c++0x")
 
