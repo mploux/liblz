@@ -1,7 +1,8 @@
 #ifndef STRING_UTILS_H
 # define STRING_UTILS_H
-
-# include <unistd.h>
+# ifndef _WIN32
+#  include "unistd.h"
+# endif
 # include <stdlib.h>
 # include <string.h>
 

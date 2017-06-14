@@ -1,7 +1,8 @@
 #ifndef ERROR_H
 # define ERROR_H
-
-# include <unistd.h>
+# ifndef _WIN32
+#  include "unistd.h"
+# endif
 # include <stdlib.h>
 
 namespace lz
