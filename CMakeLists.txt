@@ -13,5 +13,5 @@ file(GLOB_RECURSE source_files src/*)
 add_library(LAZY STATIC ${source_files})
 
 target_link_libraries(LAZY glfw glew)
-target_include_directories(LAZY PUBLIC ${OPENGL_INCLUDE_DIR} deps/glew/include)
+target_include_directories(LAZY PUBLIC ${OPENGL_INCLUDE_DIR} ../glew/include)
 target_link_libraries(LAZY ${OPENGL_gl_LIBRARY})
