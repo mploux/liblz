@@ -15,13 +15,13 @@ vec2::vec2(vec2* vec)
 	this->y = vec->y;
 }
 
-vec2::vec2(float x, float y, float z)
+vec2::vec2(float x, float y)
 {
 	this->x = x;
 	this->y = y;
 }
 
-void vec2::set(float x, float y, float z)
+void vec2::set(float x, float y)
 {
 	this->x = x;
 	this->y = y;
@@ -29,7 +29,7 @@ void vec2::set(float x, float y, float z)
 
 float vec2::magnitude()
 {
-	return (SQRT(x * x + y * y + z * z));
+	return (SQRT(x * x + y * y));
 }
 
 vec2 vec2::normalize()

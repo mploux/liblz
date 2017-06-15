@@ -2,21 +2,16 @@ cmake_minimum_required(VERSION 3.5.1)
 
 project("LAZY")
 
-OPTION(GLEW_PATH "GLEW directory" ../glew)
-OPTION(GLFW_PATH "GLFW directory" ../glfw)
+option(LAZY_GLEW_PATH "GLEW directory" ../glew)
+option(LAZY_GLFW_PATH "GLFW directory" ../glfw)
 
-SET(CMAKE_CXX_FLAGS "-std=c++0x")
+set(CMAKE_CXX_FLAGS "-std=c++11")
 
-INCLUDE_DIRECTORIES(includes/LZ/ ${GLEW_PATH}/include/ ${GLFW_PATH}/include/)
+include_directories(includes/LZ/ ${LAZY_GLEW_PATH}/include/ ${LAZY_GLFW_PATH}/include/)
 
-FILE(
-	GLOB_RECURSE
-	source_files
-	src/*
-)
+file(GLOB_RECURSE source_files src/*)
+add_library(LAZY STATIC ${source_files})
 
-ADD_LIBRARY(
-	LAZY
-	STATIC
-	${source_files}
-)
+target_link_libraries(LAZY glfw glew)
+target_include_directories(LAZY PUBLIC ${OPENGL_INCLUDE_DIR} deps/glew/include)
+target_link_libraries(LAZY ${OPENGL_gl_LIBRARY})

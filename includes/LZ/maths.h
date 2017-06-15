@@ -46,7 +46,7 @@ namespace lz
 			void set(float x, float y);
 
 			float magnitude();
-			vec3 normalize();
+			vec2 normalize();
 
 			//ADD
 			inline vec2 add(float x, float y)
